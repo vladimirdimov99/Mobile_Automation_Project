@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AddNumbersAndCheckHistory {
+public class AddThenSubractNumbersAndCheckHistory {
     AppiumDriver driver;
 
     @BeforeTest
@@ -35,11 +35,14 @@ public class AddNumbersAndCheckHistory {
     }
 
     @Test(priority = 2)
-    public void MultiplyIdenticalNumbers() {
+    public void AddThenSubtractNumbers() {
         AndroidCalculatorApplication androidCalculatorApplication = new AndroidCalculatorApplication(driver);
         androidCalculatorApplication.selectANumber();
         androidCalculatorApplication.selectAddSign();
         androidCalculatorApplication.selectANumber();
+        androidCalculatorApplication.selectSubtractSign();
+        androidCalculatorApplication.selectANumber();
+
         String realTimeResult = driver.findElement((androidCalculatorApplication.checkRealTimeResult)).getText();
         androidCalculatorApplication.selectEqualSign();
 

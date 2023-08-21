@@ -35,7 +35,7 @@ public class SubtractNumbersAndCheckHistory {
     }
 
     @Test(priority = 2)
-    public void MultiplyIdenticalNumbers() {
+    public void SubtractNumbers() {
         AndroidCalculatorApplication androidCalculatorApplication = new AndroidCalculatorApplication(driver);
         androidCalculatorApplication.selectANumber();
         androidCalculatorApplication.selectSubtractSign();
